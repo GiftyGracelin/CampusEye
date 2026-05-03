@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>Staff</h2>
+<button onclick="scrollToSection('studentsSection')">Students</button>
+<button onclick="scrollToSection('leaveSection')">Leaves</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="content">
+<section id="studentsSection" class="section">
+<h2>Assigned Students</h2>
+<div id="data"></div>
+</section>
+
+<section id="leaveSection" class="section">
+<h2>Leave Requests</h2>
+<div id="leaveData"></div>
+</section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

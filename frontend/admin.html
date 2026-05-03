@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="sidebar">
+<h2>Admin</h2>
+<button onclick="scrollToSection('approveSection')">Approve Users</button>
+<button onclick="scrollToSection('usersSection')">All Users</button>
+<button onclick="scrollToSection('monitorSection')">Monitor Classroom</button>
+<button onclick="logout()">Logout</button>
+</div>
+
+<div class="content">
+<section id="approveSection" class="section">
+<h2>Pending Users</h2>
+<div id="adminData"></div>
+</section>
+
+<section id="usersSection" class="section">
+<h2>All Users</h2>
+<div class="card">
+<h3>Staff and Their Students</h3>
+<div id="staffStudentsTable"></div>
+</div>
+</section>
+
+<section id="monitorSection" class="section">
+<h2>Monitor Classroom</h2>
+<div id="adminMessage" class="card"></div>
+<div class="card">
+<h3>Camera Capture</h3>
+<button onclick="runCapture()">Start Capture</button>
+</div>
+
+<div class="card">
+<h3>Attendance System</h3>
+<button onclick="runAttendanceAI()">Start Attendance</button>
+</div>
+
+<div class="card">
+<h3>Behaviour Monitoring</h3>
+<button onclick="runPhoneDetection()">Phone and Sleepiness Detect</button>
+<button onclick="runPostureDetection()">Posture Detect</button>
+</div>
+</section>
+</div>
+
+<script src="script.js"></script>
+<script>
+window.addEventListener('DOMContentLoaded', () => {
+ pending();
+ loadAllUsers();
+});
+</script>
+</body>
+</html>
